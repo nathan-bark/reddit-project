@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 95vw;
+  padding: 20px;
+  background-color: rgb(152, 188, 233);
+}
+
+.searchbar {
+    border-radius: 45px;
+    border: none;
+    padding-left: 12px;
+
+}
+
