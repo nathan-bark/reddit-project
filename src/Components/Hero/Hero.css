@@ -36,14 +36,14 @@
   );
 }
 
-h1 {
+.hero-field h1 {
     font-size: 5.6rem;
 }
 
-h2 {
+.hero-field h2 {
     font-size: 3rem;
 }
 
-h3 {
+.hwerofield h3 {
     font-size: 2rem;
 }
