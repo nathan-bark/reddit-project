@@ -5,7 +5,11 @@ const SignInRegisterButton = () => {
     <Button
       variant="contained"
       size="small"
-      sx={{ backgroundColor: "#666BB5" }}
+      sx={{ 
+        backgroundColor: "#00FFB7", 
+        color: "#666BB5", 
+        fontSize: "1.4rem" 
+      }}
     >
       Sign Up / Register
     </Button>
