@@ -2,17 +2,15 @@ import './App.css';
 
 import NavBar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
-import SignInForm from './Components/Forms/SignInForm';
-import RegisterForm from './Components/Forms/RegisterForm';
+import FormPage from './Components/FormPage/FormPage';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <NavBar /> */}
+        <NavBar />
         {/* <Hero /> */}
-        <SignInForm />
-        <RegisterForm />
+        <FormPage />
       </header>
     </div>
   );

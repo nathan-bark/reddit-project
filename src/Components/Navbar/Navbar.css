@@ -7,33 +7,24 @@ body {
   padding: 0;
 }
 
-.container {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: auto;
-}
-
 .navbar {
+  position: relative;
+  top: 0;
   display: flex;
-  align-items: center;
   width: 100%;
   padding: 20px;
   background-color: rgb(152, 188, 233);
 }
 
-.searchbar {
-    border-radius: 45px;
-    border: none;
-    padding: 6px 0 6px 12px;
-    margin-right: 20px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-
+.srch-btn {
+  color: #00FFB7;
+  background-color: #666BB5;
+  border-color: #00FFB7;
 }
 
-.nav-options {
-  margin-right: 30px;
-  margin-left: auto;
+.srch-btn:hover {
+  background-color: #666bb5a4;
+  color: #00FFB7;
 }
 
 .logo {
