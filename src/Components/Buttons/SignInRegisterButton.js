@@ -11,7 +11,7 @@ const SignInRegisterButton = () => {
         fontSize: "1.4rem" 
       }}
     >
-      Sign Up / Register
+      Sign In / Register
     </Button>
   );
 };
