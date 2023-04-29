@@ -6,11 +6,15 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 
 const SubRedditCard = () => {
   return (
-    <Card sx={{ 
-        maxWidth: 345,
-        boxShadow: '5px 5px 15px rgba(0,0,0,0.7)',
-        width: '22%',
-        marginRight: 4 }}>
+    <Card
+      sx={{
+        width: '20%',
+        minWidth: 150,
+        boxShadow: "5px 5px 15px rgba(0,0,0,0.7)",
+        marginRight: 4,
+        marginBottom: 4,
+      }}
+    >
       <CardActionArea>
         <CardMedia
           component="img"

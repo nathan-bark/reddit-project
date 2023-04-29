@@ -4,6 +4,7 @@ import NavBar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import FormPage from './Components/FormPage/FormPage';
 import SearchPage from './Components/SearchPage/SearchPage';
+import PostsPage from './Components/PostsPage/PostsPage';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <NavBar />
         {/* <Hero /> */}
         {/* <FormPage /> */}
-        <SearchPage />
+        {/* <SearchPage /> */}
+        <PostsPage />
       </header>
     </div>
   );
