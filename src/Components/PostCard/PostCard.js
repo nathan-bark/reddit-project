@@ -16,6 +16,7 @@ const PostCard = () => {
             maxWidth: 360,
             bgcolor: "background.paper",
             borderRadius: 5,
+            margin: 2
           }}
         >
           <ListItem alignItems="flex-start">

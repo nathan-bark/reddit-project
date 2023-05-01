@@ -1,7 +1,9 @@
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const SignInRegisterButton = () => {
   return (
+    <Link to='signin-register'>
     <Button
       variant="contained"
       size="small"
@@ -13,6 +15,7 @@ const SignInRegisterButton = () => {
     >
       Sign In / Register
     </Button>
+    </Link>
   );
 };
 export default SignInRegisterButton;
