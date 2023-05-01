@@ -1,5 +1,7 @@
 import SubRedditCard from "../SubRedditCards/SubRedditCards";
 import { Link } from "react-router-dom";
+
+
 const SearchPage = () => {
   return (
     <div className="flex flex-col justify-center items-center w-screen h-screen ">
