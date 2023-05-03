@@ -3,22 +3,25 @@ import "./Navbar.css";
 import SignInRegisterButton from "../Buttons/SignInRegisterButton";
 import logo from "../../assets/logo-no-background.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { updateSearchTerm } from "../features/searchSubredditsSlice";
+import { updateDetails } from "../features/subredditDetailsSlice";
 
 const NavBar = () => {
-
-  let [ searchTerm, setSearchTerm ] = useState('')
+  const dispatch = useDispatch();
+  const searchTerm = useSelector(state => state.searchSubreddit.searchTerm)
+  const displayName = useSelector(state => state.subredditDetails.displayName)  
 
   const redditFetch = () =>{
-    fetch(`https://www.reddit.com/subreddits/search.json?q=${searchTerm}&limit=10`)
+    fetch(`https://www.reddit.com/subreddits/search.json?q=${searchTerm}&limit=10&show=all`)
     .then(response => response.json())
-    .then(data => console.log(data.data.children))
-    setSearchTerm('')
+    .then(data => dispatch(updateDetails(data.data.children[0].data)))
+    console.log(displayName)
+    ;
   }
 
   const searchChange = (e) => {
-    const input = e.target.value
-    setSearchTerm(input);
+    dispatch(updateSearchTerm(e.target.value))
   }
 
   return (
