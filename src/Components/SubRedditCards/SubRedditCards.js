@@ -4,25 +4,30 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
-const SubRedditCard = ({display_name, description, image}) => {
+const SubRedditCard = ({ display_name, description, image }) => {
   console.log(display_name);
   return (
     <Card
       sx={{
         width: '80%',
         minWidth: 150,
+        height: 300,
         boxShadow: "5px 5px 15px rgba(0,0,0,0.7)",
-        margin: 'auto'
+        margin: "auto",
+        borderRadius: 4
       }}
     >
       <CardActionArea>
         <CardMedia
           component="img"
-          width="100%"
-          height="20px"
           image={image}
-          alt="green iguana"
+          alt="subreddit header image"
+          sx={{
+            objectFit: "contain",
+            height: 100
+          }}
         />
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {display_name}
