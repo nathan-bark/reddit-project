@@ -4,31 +4,31 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
-const SubRedditCard = () => {
+const SubRedditCard = ({display_name, description, image}) => {
+  console.log(display_name);
   return (
     <Card
       sx={{
-        width: '20%',
+        width: '80%',
         minWidth: 150,
         boxShadow: "5px 5px 15px rgba(0,0,0,0.7)",
-        marginRight: 4,
-        marginBottom: 4,
+        margin: 'auto'
       }}
     >
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="https://cdn.mos.cms.futurecdn.net/6AxBGxrtbSAkmhLmtdvGLX.jpg"
+          width="100%"
+          height="20px"
+          image={image}
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            r/Lizard
+            {display_name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>
