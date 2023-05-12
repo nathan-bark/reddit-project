@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
 const SubRedditCard = ({ display_name, description, image }) => {
-  console.log(display_name);
   return (
     <Card
       sx={{
