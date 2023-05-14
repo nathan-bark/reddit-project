@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./SearchPage.css";
 import { useDispatch } from "react-redux";
-import { updateSelectedName } from "../features/subredditDetailsSlice";
+import { updateSelectedName, updatePosts } from "../features/subredditDetailsSlice";
 const SearchPage = () => {
   const dispatch = useDispatch();
   const { searchTerm, searchClicked } = useSelector(
     (state) => state.searchSubreddit
   );
+  // const selectedName = useSelector(state => state.subredditDetails.selectedSubName)
   const subreddits = useSelector((state) => {
     if (
       //check if initialised and length
@@ -29,6 +30,9 @@ const SearchPage = () => {
   });
   const fetchName = (name) => {
     dispatch(updateSelectedName(name));
+    fetch(`https://www.reddit.com/${name}/new.json`)
+    .then(response => response.json())
+    .then(data => dispatch(updatePosts(data.data.children)))
     
   };
 

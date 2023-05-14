@@ -7,7 +7,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 
-const PostCard = () => {
+const PostCard = ({title, author, content}) => {
   return (
         <div>
         <List
@@ -24,7 +24,7 @@ const PostCard = () => {
               <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
             </ListItemAvatar>
             <ListItemText
-              primary="Brunch this weekend?"
+              primary={title}
               secondary={
                 <React.Fragment>
                   <Typography
@@ -33,9 +33,9 @@ const PostCard = () => {
                     variant="body2"
                     color="text.primary"
                   >
-                    Ali Connors
+                    {author}
                   </Typography>
-                  {" — I'll be in your neighborhood doing errands this…"}
+                  {content}
                 </React.Fragment>
               }
             />
