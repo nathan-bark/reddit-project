@@ -31,8 +31,8 @@ const PostCard = ({ title, author, content }) => {
         sx={{
           width: 360,
           maxWidth: 360,
-          bgcolor: "background.paper",
-          borderRadius: 3,
+          // bgcolor: "background.paper",
+          borderRadius: '1rem',
           height:155,
           overflow:'hidden',
         }}
