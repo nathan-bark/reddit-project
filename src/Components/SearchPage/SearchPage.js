@@ -57,7 +57,8 @@ const SearchPage = () => {
             <SubRedditCard
               display_name={subreddit.display_name}
               description={subreddit.description}
-              image={subreddit.image}
+              image={
+                subreddit.image ? subreddit.image : 'https://static.vecteezy.com/system/resources/previews/008/385/783/original/reddit-social-media-design-icon-symbol-logo-illustration-free-vector.jpg'}
             />
           </Link>
         ))}
