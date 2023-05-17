@@ -7,9 +7,9 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 const SubRedditCard = ({ display_name, description, image }) => {
   return (
     <Card
+    className="sub-card"
       sx={{
-        width: '80%',
-        minWidth: 150,
+        width: 200,
         height: 300,
         boxShadow: "5px 5px 15px rgba(0,0,0,0.7)",
         margin: "auto",

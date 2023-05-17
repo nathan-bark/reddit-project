@@ -1,33 +1,34 @@
 .search-page {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 400px;
-    align-items: center;
-    width: 80%;
-    height: auto;
-    padding: 3rem;
-    overflow: hidden;
-    border-radius: 45px;
-    background-image: linear-gradient(
-        40deg,
-        hsl(213deg 65% 75%) 0%,
-        hsl(215deg 60% 74%) 6%,
-        hsl(216deg 56% 72%) 14%,
-        hsl(218deg 52% 70%) 28%,
-        hsl(220deg 49% 68%) 56%,
-        hsl(222deg 46% 66%) 77%,
-        hsl(224deg 43% 64%) 86%,
-        hsl(227deg 41% 62%) 92%,
-        hsl(230deg 39% 60%) 95%,
-        hsl(233deg 37% 58%) 98%,
-        hsl(236deg 35% 55%) 100%
-      );
-    }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 80%;
+  height: auto;
+  padding: 3rem;
+  overflow: hidden;
+  border-radius: 45px;
+  background-image: linear-gradient(
+    40deg,
+    hsl(213deg 65% 75%) 0%,
+    hsl(215deg 60% 74%) 6%,
+    hsl(216deg 56% 72%) 14%,
+    hsl(218deg 52% 70%) 28%,
+    hsl(220deg 49% 68%) 56%,
+    hsl(222deg 46% 66%) 77%,
+    hsl(224deg 43% 64%) 86%,
+    hsl(227deg 41% 62%) 92%,
+    hsl(230deg 39% 60%) 95%,
+    hsl(233deg 37% 58%) 98%,
+    hsl(236deg 35% 55%) 100%
+  );
+}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./SearchPage.css";
 import { useDispatch } from "react-redux";
-import { updateSelectedName, updatePosts } from "../features/subredditDetailsSlice";
+import { updateSelectedName, updatePosts, updateSelectedImg } from "../features/subredditDetailsSlice";
 const SearchPage = () => {
   const dispatch = useDispatch();
   const { searchTerm, searchClicked } = useSelector(
@@ -28,8 +28,9 @@ const SearchPage = () => {
       return [];
     }
   });
-  const fetchName = (name) => {
+  const fetchName = (name, image) => {
     dispatch(updateSelectedName(name));
+    dispatch(updateSelectedImg(image))
     fetch(`https://www.reddit.com/${name}/new.json`)
     .then(response => response.json())
     .then(data => dispatch(updatePosts(data.data.children)))
@@ -50,7 +51,8 @@ const SearchPage = () => {
           <Link
             key={subreddit.display_name}
             to="/posts"
-            onClick={() => fetchName(subreddit.display_name)}
+            onClick={() => fetchName(subreddit.display_name, subreddit.image)}
+      
           >
             <SubRedditCard
               display_name={subreddit.display_name}

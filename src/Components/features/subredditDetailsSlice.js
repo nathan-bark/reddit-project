@@ -5,6 +5,7 @@ const subredditDetailsSlice = createSlice({
     initialState: {
         subArray: [],
         selectedSubName: '',
+        selectedSubImg: '',
         subPosts: [],
     },
     reducers: {
@@ -16,10 +17,14 @@ const subredditDetailsSlice = createSlice({
         },
         updateSelectedName: (state, action) => {
             state.selectedSubName = action.payload
+        },
+
+        updateSelectedImg: (state, action) => {
+            state.selectedSubImg = action.payload
         }
     }
 })
 
-export const { updateDetails, updatePosts, updateSelectedName } = subredditDetailsSlice.actions;
+export const { updateDetails, updatePosts, updateSelectedName, updateSelectedImg } = subredditDetailsSlice.actions;
 
 export default subredditDetailsSlice.reducer;

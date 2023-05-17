@@ -17,6 +17,11 @@ const PostsPage = () => {
       return [];
     }
   });
+
+  const image = useSelector((state) => {
+    return state.subredditDetails.selectedSubImg
+  });
+  
   return (
     <div className="post-container">
       <div className="post-card">
@@ -26,6 +31,7 @@ const PostsPage = () => {
             title={post.postTitle}
             author={post.author}
             content={post.postContent}
+            image={image}
           />
         ))}
       </div>

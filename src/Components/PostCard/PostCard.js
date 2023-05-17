@@ -7,7 +7,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 
-const PostCard = ({ title, author, content }) => {
+const PostCard = ({ title, author, content, image }) => {
   const maxCharTitle = 50;
   const maxCharContent = 100;
   let truncTitle = "";
@@ -39,7 +39,7 @@ const PostCard = ({ title, author, content }) => {
       >
         <ListItem alignItems="flex-start">
           <ListItemAvatar>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+            <Avatar alt="Remy Sharp" src={image} />
           </ListItemAvatar>
           <ListItemText
             primary={<Typography
