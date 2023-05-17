@@ -22,8 +22,13 @@ const PostsPage = () => {
     return state.subredditDetails.selectedSubImg
   });
 
+  const title = useSelector(state => {
+    return state.subredditDetails.selectedSubName
+  })
+
   return (
     <div className="post-container">
+      <h1 className=" text-6xl mb-10 mt-10">Posts for {title}</h1>
       <div className="post-card">
         {posts.map((post) => (
           <PostCard
