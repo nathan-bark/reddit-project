@@ -7,7 +7,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 
-const PostCard = ({ title, author, content, image }) => {
+const PostCard = ({ title, author, content, image, upVotes, numComments }) => {
   const maxCharTitle = 50;
   const maxCharContent = 100;
   let truncTitle = "";
@@ -71,6 +71,10 @@ const PostCard = ({ title, author, content, image }) => {
                 }}
               >
                 {truncContent}
+              </Typography>
+              <Typography >
+                up votes = {upVotes},
+                commments ={numComments}
               </Typography>
               </React.Fragment>
             }

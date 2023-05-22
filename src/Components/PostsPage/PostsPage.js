@@ -12,6 +12,8 @@ const PostsPage = () => {
         postTitle: subreddit.data.title,
         author: subreddit.data.author,
         postContent: subreddit.data.selftext,
+        postUpVotes: subreddit.data.ups,
+        postNumComments: subreddit.data.num_comments,
       }));
     } else {
       return [];
@@ -37,6 +39,8 @@ const PostsPage = () => {
             author={post.author}
             content={post.postContent}
             image={image ? image : 'https://static.vecteezy.com/system/resources/previews/008/385/783/original/reddit-social-media-design-icon-symbol-logo-illustration-free-vector.jpg'}
+            upVotes={post.postUpVotes}
+            numComments={post.postNumComments}
           />
         ))}
       </div>
