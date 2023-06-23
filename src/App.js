@@ -16,7 +16,6 @@ function App() {
           <Route index element={<Hero />} />
           <Route path="search" element={<SearchPage />} />
           <Route path="posts" element={<PostsPage />} />
-
           <Route path="signin-register" element={<FormPage />} />
         </Routes>
       </header>

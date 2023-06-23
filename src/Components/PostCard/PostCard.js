@@ -6,6 +6,8 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
+import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import CommentRoundedIcon from '@mui/icons-material/CommentRounded';
 
 const PostCard = ({ title, author, content, image, upVotes, numComments }) => {
   const maxCharTitle = 50;
@@ -33,7 +35,7 @@ const PostCard = ({ title, author, content, image, upVotes, numComments }) => {
           maxWidth: 360,
           // bgcolor: "background.paper",
           borderRadius: '1rem',
-          height:155,
+          height:175,
           overflow:'hidden',
         }}
       >
@@ -73,8 +75,8 @@ const PostCard = ({ title, author, content, image, upVotes, numComments }) => {
                 {truncContent}
               </Typography>
               <Typography >
-                up votes = {upVotes},
-                commments ={numComments}
+               <ThumbUpAltRoundedIcon/> {upVotes},
+               <CommentRoundedIcon/>  {numComments}
               </Typography>
               </React.Fragment>
             }
